@@ -48,9 +48,18 @@ export default function App() {
 
      </View>
     <View style = {{flex:0.1, flexDirection: 'row', marginBottom: 50}}>
-      <View style ={{flex: 0.334, backgroundColor: "blue"}}></View>
-      <View style ={{flex: 0.333, backgroundColor: "green"}}></View>
-      <View style ={{flex: 0.333, backgroundColor: "red"}}></View>
+      <View style ={{flex: 0.334, justifyContent: 'center', alignItems: 'flex-end'}}>
+      <Image style={styles.iconImage}
+        source={require('./assets/gi.jpg')}/>
+      </View>
+      <View style ={{flex: 0.333, justifyContent: 'center', alignItems: 'center'}}>
+      <Image style={styles.iconImages}
+        source={require('./assets/linkedin.png')}/>
+      </View>
+      <View style ={{flex: 0.333, justifyContent: 'center', alignItems: 'flex-start'}}>
+      <Image style={styles.iconImagess}
+        source={require('./assets/git.png')}/>
+      </View>
     </View>
 
      <View style={{flex:0.10, alignItems:'center',justifyContent:'center'}}>
@@ -107,5 +116,18 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     marginBottom: 90
+  },
+  iconImage: {
+    width: 40,
+    height: 40,
+    
+  },
+  iconImages: {
+    width: 80,
+    height: 40,  
+  },
+  iconImagess: {
+    width: 40,
+    height: 40,  
   }
 });
