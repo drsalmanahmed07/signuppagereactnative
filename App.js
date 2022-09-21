@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, Alert } fro
 
 export default function App() {
   return (
-    <View style={{flex:1,}}>
+    <View style={{flex:1, marginTop: 10}}>
        <View style={{flex:0.20, alignItems:'center', justifyContent:'center'}}>        
         <Image style={styles.imageSetting}
         source={require('./assets/login.jpg')}/>
@@ -13,7 +13,7 @@ export default function App() {
       </View>
       
 
-      <View style={{flex:0.70, alignItems:'center', justifyContent:'center', marginTop:20}}>
+      <View style={{flex:0.70, alignItems:'center', justifyContent:'center', marginTop:70}}>
 
         <TextInput style={styles.InputSettings}
         placeholder='First Name'
@@ -26,7 +26,7 @@ export default function App() {
 
 
 <TextInput style={styles.InputSettings}
-        placeholder='username'
+        placeholder='Username'
         />
 
 <TextInput secureTextEntry= {true} style={styles.InputSettings}
@@ -44,10 +44,13 @@ export default function App() {
                 placeholder='Phone'
 
         /> */}
-
+      <View  style={styles.txtstyle}>
+     <Text style= {styles.textstyles}>Or Sign up with:</Text>
+     </View>
 
      </View>
-    <View style = {{flex:0.1, flexDirection: 'row', marginBottom: 50}}>
+     
+    <View style = {{flex:0.1, flexDirection: 'row', marginBottom: 70}}>
       <View style ={{flex: 0.334, justifyContent: 'center', alignItems: 'flex-end'}}>
       <Image style={styles.iconImage}
         source={require('./assets/gi.jpg')}/>
@@ -99,9 +102,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     margin: 10,
     padding: 5,
-    
-
-
   },
   signupStyle: {
     color: '#14c4cd',
@@ -129,5 +129,14 @@ const styles = StyleSheet.create({
   iconImagess: {
     width: 40,
     height: 40,  
+  },
+  txtstyle:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 15
+  },
+  textstyles:{
+    fontWeight:'bold',
+    fontSize:18
   }
 });
